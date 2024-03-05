@@ -1,0 +1,34 @@
+﻿@model DoctorAddViewModel
+
+<div class="container">
+    <h1 class="text-center">Добавление нового врача</h1>
+    
+    <form asp-action="AddDoctor" method="post">
+        <div class="form-group">
+            <label asp-for="FirstName">Имя</label>
+            <input class="form-control" asp-for="FirstName">         
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <input class="form-control" asp-for="LastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="MiddleName">Отчество</label>
+            <input class="form-control" asp-for="MiddleName">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Departments">Отделение</label>
+            <select multiple class="form-select" asp-for="Departments" asp-items="new SelectList(Model.DepartmentsTitles)">
+            </select>
+        </div>
+        <div>
+            <label asp-for="Positions">Должности</label>
+            <select multiple class="form-select" asp-for="Positions" asp-items="new SelectList(Model.PositionsTitles)">
+            </select>
+        </div>
+        
+        <br />
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>

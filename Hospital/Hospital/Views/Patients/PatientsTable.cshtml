@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Patient>
+@inject hospitaldbContext _db
+<div>
+    <a asp-action="AddPatient" asp-controller="Patients" class="btn btn-outline-dark mb-4" style="width: 100%;">Добавить пациента в базу данных</a>
+</div>
+@if(Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Возраст</th>
+                <th scope="col">Пол</th>
+                <th scope="col">Номер полиса</th>
+                <th scope="col">Серия паспорта</th>
+                <th scope="col">Номер паспорта</th>
+                <th scope="col">Палата</th>
+                <th scope="col">Корпус</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var patient in Model)
+            {
+                <tr>
+                    <th scope="row">@patient.Id</th>
+                    <td>@patient.FirstName</td>
+                    <td>@patient.LastName</td>
+                    <td>@patient.MiddleName</td>
+                    <td>@patient.Age</td>
+                    <td>@patient.Sex</td>
+                    <td>@patient.InsuranceNumber</td>
+                    <td>@patient.PassportSeries</td>
+                    <td>@patient.PassportNumber</td>
+                    @if(patient.Chamber != null)
+                    {
+                        <td>@patient.Chamber.Number</td>
+                        <td>@_db.Corps.Where(x => x.Id == patient.Chamber.CorpsId).Select(x => x.Title).First()</td>
+                    } else
+                    {
+                        <td>Палата не определена</td>
+                        <td></td>
+                    }
+                    <td class="btn-group">
+                        <a class="btn btn-primary" asp-action="UpdatePatient" asp-route-id="@patient.Id">Изменить</a>
+                        <a class="btn btn-danger" asp-action="DeletePatient" asp-route-id="@patient.Id">Удалить</a>                    
+                        <div class="btn-group" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn btn-outline-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                +
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" asp-action="AddServicesHistory" asp-route-id="@patient.Id">Добавить услугу</a></li>
+                                <li><a class="dropdown-item" asp-action="AddRecipe" asp-route-id="@patient.Id">Выписать рецепт</a></li>
+                                <li><a class="dropdown-item" asp-action="AddDiseasesHistory" asp-route-id="@patient.Id">Добавить историю болезни</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+} else
+{
+    <h3>Пациентов нет в базе данных</h3>
+}
+

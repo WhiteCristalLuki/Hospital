@@ -1,0 +1,26 @@
+﻿@model PatientAddServicesHistoryViewModel
+@inject hospitaldbContext _db
+
+<div class="container">
+    <h1>Добавление услуги</h1>
+    <h3>Пользователю @Model.FirstName @Model.LastName @Model.MiddleName</h3>
+    <form method="post" asp-action="AddServicesHistory">
+        <div>
+            <label asp-for="Service">Услуги</label>
+            <select class="form-select" asp-for="Service">
+                @foreach (var corp in _db.Corps.Select(x => new { Title = x.Title, Id = x.Id }).ToList())
+                {
+                    //@if (corp.Id == 1) continue;
+                    <optgroup label="@corp.Title">
+                        @foreach (var service in _db.Services.Where(x => x.CorpsId == corp.Id).ToList())
+                        {
+                            <option>@service.Title</option>
+                        }
+                    </optgroup>
+                }
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Добавить</button>
+    </form>
+</div>

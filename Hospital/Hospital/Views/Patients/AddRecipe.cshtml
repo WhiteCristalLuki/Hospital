@@ -1,0 +1,39 @@
+﻿@model PatientAddRecipeViewModel
+@inject hospitaldbContext _db
+
+@{}
+
+<div class="container">
+    <h1 class="text-center">Добавление рецепта</h1>
+    <h3>Пациент: @Model.FirstName @Model.LastName @Model.MiddleName</h3>
+    <form asp-action="AddRecipe" method="post">
+        <input hidden asp-for="Id" />
+        <div>
+            <label asp-for="DoctorsFullName">Врач</label>
+            <select class="form-select" asp-for="DoctorsFullName">
+                @foreach (var department in _db.Departments.Select(x => new {Id = x.Id, Title = x.Title, CorpsId = x.CorpsId }).ToList())
+                {
+                    @if (department.CorpsId == 1) continue;
+                    <optgroup label="@department.Title">
+                        @foreach (var doctors in _db.Departments.Where(x => x.Id == department.Id).Select(x => x.Doctors).ToList())
+                        {
+                            @foreach (var doctor in doctors)
+                            {
+                                <option>@string.Concat(doctor.FirstName, " ", doctor.LastName, " ", doctor.MiddleName)</option>
+                            }
+                        }
+                    </optgroup>
+                }
+            </select>
+        </div>
+        <div>
+            <label asp-for="MedecineTitle">Препарат</label>
+            <select class="form-select" asp-for="MedecineTitle" 
+                asp-items="new SelectList(_db.Medecines.Where(x => x.Quantity > 0).Select(x => x.Title).ToList())">
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Выписать</button>
+    </form>
+</div>
+

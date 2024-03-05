@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Hospital
+build_property.RootNamespace = Hospital
+build_property.ProjectDir = C:\Users\firsa\Desktop\6 Технологии баз данных\Курсовая\Hospital\Hospital\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\firsa\Desktop\6 Технологии баз данных\Курсовая\Hospital\Hospital
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Chambers/ChambersTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWJlcnNcQ2hhbWJlcnNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Corps/CorpsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ycHNcQ29ycHNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Departments/DepartmentsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0bWVudHNcRGVwYXJ0bWVudHNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/DiseasesHistory/DiseasesHistoryTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzZWFzZXNIaXN0b3J5XERpc2Vhc2VzSGlzdG9yeVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Diseases/DiseasesTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzZWFzZXNcRGlzZWFzZXNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Doctors/AddDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yc1xBZGREb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Doctors/DoctorsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yc1xEb2N0b3JzVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Doctors/UpdateDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9jdG9yc1xVcGRhdGVEb2N0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Home/Functions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGdW5jdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Home/Tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Medecines/MedecinesTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkZWNpbmVzXE1lZGVjaW5lc1RhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/AddDiseasesHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQWRkRGlzZWFzZXNIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/AddPatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQWRkUGF0aWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/AddRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQWRkUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/AddServicesHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcQWRkU2VydmljZXNIaXN0b3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/PatientsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcUGF0aWVudHNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Patients/UpdatePatient.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudHNcVXBkYXRlUGF0aWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Positions/PositionsTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaXRpb25zXFBvc2l0aW9uc1RhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Recipes/RecipesTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xSZWNpcGVzVGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/ServicesHistory/ServicesHistoryTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNIaXN0b3J5XFNlcnZpY2VzSGlzdG9yeVRhYmxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Services/ServicesTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZXNcU2VydmljZXNUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Staff/StaffTable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcU3RhZmZUYWJsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/firsa/Desktop/6 Технологии баз данных/Курсовая/Hospital/Hospital/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-j6i1r8qj4i

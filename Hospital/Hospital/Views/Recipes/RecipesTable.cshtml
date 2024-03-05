@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Recipe>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Пациент</th>
+                <th scope="col">Доктор</th>
+                <th scope="col">Препарат</th>
+                <th scope="col">Дата выписки</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in Model)
+            {
+                <tr>
+                    <th scope="row">@recipe.Id</th>
+                    <td>@recipe.Patient?.FirstName @recipe.Patient?.LastName @recipe.Patient?.MiddleName</td>
+                    <td>@recipe.Doctor?.FirstName @recipe.Doctor?.LastName @recipe.Doctor?.MiddleName</td>
+                    <td>@recipe.Medecine.Title</td>
+                    <td>@recipe.PrescribeDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Рецептов нет в базе данных</h3>
+}

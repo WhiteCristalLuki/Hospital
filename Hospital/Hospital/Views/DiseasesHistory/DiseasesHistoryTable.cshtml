@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DiseasesHistory>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Пациент</th>
+                <th scope="col">Дата заболевания</th>
+                <th scope="col">Болезнь</th>
+                <th scope="col">Примечания</th>
+                <th scope="col">ID рецепта</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var diseasesHistory in Model)
+            {
+                <tr>
+                    <th scope="row">@diseasesHistory.Id</th>
+                    <td>@diseasesHistory.Patient?.FirstName @diseasesHistory.Patient?.LastName @diseasesHistory.Patient?.MiddleName</td>
+                    <td>@diseasesHistory.DiseaseDate</td>
+                    <td>@diseasesHistory.Disease.Title</td>
+                    @if (diseasesHistory.Notes != null)
+                    {
+                        <td>@diseasesHistory.Notes</td>
+                    } else
+                    {
+                        <td></td>
+                    }
+                    <td>@diseasesHistory.RecipeId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Истории болезней нет в базе данных</h3>
+}

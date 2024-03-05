@@ -1,0 +1,42 @@
+﻿@model DoctorUpdateViewModel
+@inject hospitaldbContext _db
+
+@{
+    string departments = string.Join(", ", Model.Departments);
+    string positions = string.Join(", ", Model.Positions);
+}
+
+
+<div class="container">
+    <h1 class="text-center">Обновление данных врача</h1>
+
+    <form asp-action="UpdateDoctor" method="post">
+        <input hidden asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="FirstName">Имя</label>
+            <input class="form-control" asp-for="FirstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <input class="form-control" asp-for="LastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="MiddleName">Отчество</label>
+            <input class="form-control" asp-for="MiddleName">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Departments">Отделение (Выбрано: @departments)</label>
+            <select multiple class="form-select" asp-for="Departments" asp-items="new SelectList(_db.Departments.Select(x => x.Title).ToList())">
+            </select>
+        </div>
+        <div>
+            <label asp-for="Positions">Должности (Выбрано: @positions)</label>
+            <select multiple class="form-select" asp-for="Positions" asp-items="new SelectList(_db.Positions.Select(x => x.Title).ToList())">
+            </select>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-primary">Обновить</button>
+    </form>
+</div>

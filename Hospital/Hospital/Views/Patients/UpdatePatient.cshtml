@@ -1,0 +1,71 @@
+﻿@model PatientUpdateViewModel
+@inject hospitaldbContext _db
+@{
+    var corps = _db.Corps.Select(x => new
+    {
+        Id = x.Id,
+        Title = x.Title
+    }).ToList();
+
+}
+
+<div class="container">
+    <h1 class="text-center">Обновление данных пациента</h1>
+
+    <form asp-action="UpdatePatient" method="post">
+        <input hidden asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="FirstName">Имя</label>
+            <input class="form-control" asp-for="FirstName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <input class="form-control" asp-for="LastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="MiddleName">Отчество</label>
+            <input class="form-control" asp-for="MiddleName">
+        </div>
+        <div class="form-group">
+            <label asp-for="Age">Возраст</label>
+            <input class="form-control" asp-for="Age">
+        </div>
+        <div>
+            <label asp-for="Sex">Пол</label>
+            <select class="form-select" asp-for="Sex" asp-items="new SelectList(new List<char>() {'М', 'Ж'})">
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="InsuranceNumber">Номер полиса</label>
+            <input class="form-control" asp-for="InsuranceNumber">
+        </div>
+        <div class="form-group">
+            <label asp-for="PassportSeries">Серия паспорта</label>
+            <input class="form-control" asp-for="PassportSeries">
+        </div>
+        <div class="form-group">
+            <label asp-for="PassportNumber">Номер паспорта</label>
+            <input class="form-control" asp-for="PassportNumber">
+        </div>
+        <div>
+            <label asp-for="ChamberId">Палата</label>
+            <select class="form-select" asp-for="ChamberId">
+                @foreach (var corp in corps)
+                {
+                    @if (corp.Id == 1) continue;
+                    <optgroup label="@corp.Title">
+                        @foreach (var chamber in _db.Chambers.Where(x => x.CorpsId == corp.Id &&
+                       x.Availability > 0 && x.Gender == Model.Sex).Select(x => x.Id).ToList())
+                       {
+                           <option>@chamber</option>
+                       }
+                       
+                    </optgroup>
+                    <option>@null</option>
+                }
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Обновить</button>
+    </form>
+</div>

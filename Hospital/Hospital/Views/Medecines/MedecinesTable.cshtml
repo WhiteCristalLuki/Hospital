@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Medecine>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th scope="col">Количество</th>
+                <th scope="col">Страна производитель</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var medecine in Model)
+            {
+                <tr>
+                    <th scope="row">@medecine.Id</th>
+                    <td>@medecine.Title</td>
+                    <td>@medecine.Quantity</td>
+                    <td>@medecine.MakersCountry</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Медикаментов нет в базе данных</h3>
+}

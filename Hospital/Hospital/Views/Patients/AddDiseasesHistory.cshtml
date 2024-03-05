@@ -1,0 +1,25 @@
+﻿@model PatientAddDiseasesHistoryViewModel
+@inject hospitaldbContext _db
+
+<div class="container">
+    <h1 class="text-center">Добавление истории болезни</h1>
+    <h3>Пациент: @Model.FirstName @Model.LastName @Model.MiddleName</h3>
+    <form asp-action="AddDiseasesHistory" method="post">
+        <div>
+            <label asp-for="DiseaseTitle">Болезнь</label>
+            <select class="form-select" asp-for="DiseaseTitle" asp-items="new SelectList(_db.Diseases.Select(x => x.Title).ToList())">
+            </select>
+        </div>
+        <div class="form-group">
+            <label asp-for="Notes">Примечания</label>
+            <input class="form-control" asp-for="Notes">
+        </div>
+        <div>
+            <label asp-for="RecipeId">ID рецепта</label>
+            <select class="form-select" asp-for="RecipeId" asp-items="new SelectList(_db.Recipes.Where(x => x.PatientId == Model.Id).Select(x => x.Id).ToList())">
+            </select>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>

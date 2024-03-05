@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Position>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Зарплата</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var position in Model)
+            {
+                <tr>
+                    <th scope="row">@position.Id</th>
+                    <td>@position.Title</td>
+                    <td>@position.Description</td>
+                    <td>@position.Salary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Должностей нет в базе данных</h3>
+}

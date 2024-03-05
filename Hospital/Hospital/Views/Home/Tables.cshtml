@@ -1,0 +1,222 @@
+﻿@{
+    ViewData["Title"] = "Tables";
+}
+@model hospitaldbContext
+<style>
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .rows-count {
+        font-size: 30px;
+    }
+</style>
+
+<h1>Таблицы</h1>
+<div class="container text-center" style="margin: 50px 0px;">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Пациенты
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Patients.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="PatientsTable" asp-controller="Patients">
+                        Показать
+                    </a>
+                </div>          
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Врачи
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Doctors.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="DoctorsTable" asp-controller="Doctors">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Корпуса
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Corps.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="CorpsTable" asp-controller="Corps">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Отделы
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Departments.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="DepartmentsTable" asp-controller="Departments">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Болезни
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Diseases.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="DiseasesTable" asp-controller="Diseases">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Палаты
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Chambers.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="ChambersTable" asp-controller="Chambers">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Оказанные услуги
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.ServicesHistories.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="ServicesHistoryTable" asp-controller="ServicesHistory">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Услуги
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Services.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="ServicesTable" asp-controller="Services">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Рецепты
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Recipes.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="RecipesTable" asp-controller="Recipes">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Персонал
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.staff.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="StaffTable" asp-controller="Staff">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    История болезней
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.DiseasesHistories.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="DiseasesHistoryTable" asp-controller="DiseasesHistory">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Препараты
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Medecines.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="MedecinesTable" asp-controller="Medecines">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-4">
+            <div class="card">
+                <div class="card-header">
+                    Должности
+                </div>
+                <div class="card-body">
+                    <p class="rows-count">Количество записей: @Model.Positions.Count()</p>
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-primary" asp-action="PositionsTable" asp-controller="Positions">
+                        Показать
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

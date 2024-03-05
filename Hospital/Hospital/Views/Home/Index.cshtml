@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Начальная страница";
+}
+
+<style>
+    .btn {
+        width: 500px;
+        height: 500px;
+        border-radius: 30px;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        vertical-align:middle;
+        display: inline-flex;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Система управления базой данных больницы</h1>
+    <div class="container">
+        <a asp-action="Tables" class="btn btn-outline-primary">Отобразить список таблиц</a>
+        <a asp-action="Functions" class="btn btn-outline-success">Отобразить возможные функции</a>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Staff>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Имя</th>
+                <th scope="col">Фамилия</th>
+                <th scope="col">Отчество</th>
+                <th scope="col">Должность</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staff in Model)
+            {
+                <tr>
+                    <th scope="row">@staff.Id</th>
+                    <td>@staff.FirstName</td>
+                    <td>@staff.LastName</td>
+                    <td>@staff.MiddleName</td>
+                    <td>@staff.Position.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Персонала нет в базе данных</h3>
+}

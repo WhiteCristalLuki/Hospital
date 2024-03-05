@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Service>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Название</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Корпус</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in Model)
+            {
+                <tr>
+                    <th scope="row">@service.Id</th>
+                    <td>@service.Title</td>
+                    <td>@service.Description</td>
+                    <td>@service.Corps.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Услуг нет в базе данных</h3>
+}

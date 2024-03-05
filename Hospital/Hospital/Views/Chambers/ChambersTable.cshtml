@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Chamber>
+@inject hospitaldbContext _db
+
+@if (Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Номер</th>
+                <th scope="col">Половая сегрегация</th>
+                <th scope="col">Вместимость</th>
+                <th scope="col">Свободные места</th>
+                <th scope="col">Корпус</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var chamber in Model)
+            {
+                <tr>
+                    <th scope="row">@chamber.Id</th>
+                    <td>@chamber.Number</td>
+                    <td>@chamber.Gender</td>
+                    <td>@chamber.Capacity</td>
+                    <td>@chamber.Availability</td>
+                    <td>@chamber.Corps?.Title</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Палат нет в базе данных</h3>
+}
